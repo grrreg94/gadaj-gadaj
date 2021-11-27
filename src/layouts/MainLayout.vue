@@ -4,6 +4,14 @@
        <q-img 
          src="../statics/fiber.jpg"
          class="header-image absolute-top"/>
+          <q-btn
+          class="absolute-right "
+          to="/logowanie"
+          icon="account_circle"
+          flatdense
+          flat
+          label="Login"
+          />
 
       <q-toolbar>        
         <q-toolbar-title class="absolute-center q-px-lg q-pt-xl q-mb-md">
@@ -14,7 +22,7 @@
     </q-header>
     <q-page-container>
       <router-view />
-    </q-page-container>
+     </q-page-container>
   </q-layout>
 </template>
 
