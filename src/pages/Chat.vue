@@ -15,6 +15,7 @@
         <q-form @submit="sendMessage" class="full-width">
           <q-input
             v-model="newMessage"
+            @keyup.enter="sendMessage"
             bg-color="white"
             label="Wiadomosc"
             dense
@@ -22,6 +23,7 @@
 
             <template v-slot:after>
               <q-btn 
+               @click="sendMessage"
                type="submit"
                round
                dense 
@@ -67,6 +69,7 @@ export default defineComponent({
         text: this.newMessage,
         from: 'ja'
       })
+      this.newMessage = ''
     }
   }
 });
